@@ -84,7 +84,7 @@ function PostView() {
         <Icons.UserCircleIcon className="w-6 h-6 rounded-full"  />
         <div className="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700">
             <cite className="pr-3 font-medium text-gray-900 dark:text-white">{state?.email}</cite>
-            <cite className="pl-3 text-sm text-gray-500 dark:text-gray-400">{state?.email}</cite>
+            <cite className="pl-3 text-sm text-gray-500 dark:text-gray-400">{state?.name}</cite>
         </div>
     </figcaption>
 </figure>
@@ -99,7 +99,7 @@ function PostView() {
            
         </div>
         <span className='text-xl font-bold'>Other post of {user?.username}</span>
-        <div className='flex w-full m-3 flex-wrap'>
+        <div className='flex justify-center w-full flex-wrap'>
             {
                 posts?.map((item, index)=>(
                      <PostComponent id={item.id} title={item.title} body={item.body} userId={item.userId} />
